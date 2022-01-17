@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:ignore="MissingDefaultResource">
+
+<!--    <com.bmd.bmd_ui.view.actionbar.BmdActionIconView-->
+<!--            android:id="@+id/action_bar_iv_back"-->
+<!--            style="@style/actionbarex_common_action_bar_icon"-->
+<!--            android:visibility="gone"-->
+<!--            tools:visibility="visible"-->
+<!--            android:src="@drawable/ic_back"-->
+<!--            android:tint="?colorOnMainOrSurface"-->
+<!--            android:padding="@dimen/dp_16"/>-->
+
+</FrameLayout>

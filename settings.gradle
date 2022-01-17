@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 rootProject.name = "BmdUI"
 include ':app'
 
+include ':bmd_ui'
