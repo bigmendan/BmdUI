@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    一般通用高度 -->
+    <dimen name="action_bar_bottom_line_height">0dp</dimen>
+    <dimen name="action_bar_height">44dp</dimen>
+
+
+</resources>

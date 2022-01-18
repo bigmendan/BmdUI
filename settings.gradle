@@ -7,5 +7,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "BmdUI"
 include ':app'
-
 include ':bmd_ui'
+include ':base_res'

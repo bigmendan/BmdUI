@@ -2,16 +2,22 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
-             android:layout_height="match_parent"
+             android:layout_height="@dimen/action_bar_height"
+             android:background="?colorMain"
              tools:ignore="MissingDefaultResource">
 
-<!--    <com.bmd.bmd_ui.view.actionbar.BmdActionIconView-->
-<!--            android:id="@+id/action_bar_iv_back"-->
-<!--            style="@style/actionbarex_common_action_bar_icon"-->
-<!--            android:visibility="gone"-->
-<!--            tools:visibility="visible"-->
-<!--            android:src="@drawable/ic_back"-->
-<!--            android:tint="?colorOnMainOrSurface"-->
-<!--            android:padding="@dimen/dp_16"/>-->
+    <com.bmd.bmd_ui.view.actionbar.BmdActionIconView
+            style="@style/action_bar_common_left_icon"
+            android:id="@+id/action_bar_icon"
+            android:src="@drawable/ic_back"
+            android:tint="?colorBackground"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="标题"
+            android:textSize="20sp"
+            android:layout_height="match_parent"/>
+
 
 </FrameLayout>

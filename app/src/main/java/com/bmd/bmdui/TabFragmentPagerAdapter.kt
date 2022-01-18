@@ -1,4 +1,4 @@
-package com.biomind.bmdui
+package com.bmd.bmdui
 
 import android.view.View
 import android.view.ViewGroup

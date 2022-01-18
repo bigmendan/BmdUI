@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--   全局通用颜色 -->
+    <attr name="colorMain" format="reference"/>
+    <attr name="colorBackground" format="reference"/>
+
+    <attr name="colorTransparent" format="reference"/>
+
+
+    <!--   ActionBarIcon 的颜色 -->
+    <attr name="colorActionBarIconMain" format="reference"/>
+
+    <!--   ActionBarText 的颜色-->
+    <attr name="colorActionBarTextMain" format="reference"/>
+
+
+</resources>

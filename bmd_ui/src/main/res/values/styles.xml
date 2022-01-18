@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--   ActionBarCommon 默认宽高，可以在使用时复写同名style或者内部dimen -->
+    <style name="action_bar_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/action_bar_height_def</item>
+    </style>
+
+
+    <!--    ActionBarLeftIcon -->
+    <style name="action_bar_common_left_icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/action_bar_padding_def</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <!--    ActionBarRightIcon -->
+    <style name="action_bar_common_right_icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/action_bar_padding_def</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+
+    <!--    ActionBarLeftTitle -->
+    <style name="action_bar_common_left_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/action_bar_title_text_size</item>
+        <item name="android:textColor">@color/action_bar_title_color</item>
+        <item name="android:paddingLeft">@dimen/action_bar_title_padding_left_def</item>
+        <item name="android:paddingRight">@dimen/action_bar_title_padding_right_def</item>
+
+    </style>
+
+    <!--   ActionBarCenterTitle -->
+    <style name="action_bar_common_center_title">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/action_bar_title_center_text_size</item>
+        <item name="android:textColor">@color/action_bar_title_color</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!--    ActionBarRightTitle -->
+    <style name="action_bar_common_right_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/action_bar_title_text_size</item>
+        <item name="android:textColor">@color/action_bar_title_color</item>
+        <item name="android:paddingLeft">@dimen/action_bar_title_padding_left_def</item>
+        <item name="android:paddingRight">@dimen/action_bar_title_padding_right_def</item>
+
+    </style>
+
+
+
+
+
+
+</resources>

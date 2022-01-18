@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--    可以在使用ActionBar时自定义自己想要的属性,bmd_ui 中定义的同名Style -->
+    <style name="ActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?colorMain</item>
+        <item name="ab_immersion">immersed</item>
+        <item name="ab_statusBarMode">auto</item>
+        <item name="ab_bottomLineHeight">@dimen/action_bar_bottom_line_height</item>
+        <item name="ab_statusBarColor">?colorTransparent</item>
+        <item name="ab_titleBarHeight">@dimen/action_bar_height</item>
+    </style>
+
+
+</resources>

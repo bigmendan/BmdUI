@@ -1,4 +1,4 @@
-package com.biomind.bmdui
+package com.bmd.bmdui
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

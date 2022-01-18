@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   tools:context=".MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".MainActivity">
 
 
-    <multi
+    <com.bmd.bmd_ui.view.actionbar.BmdActionBar
+            style="@style/ActionBar"
+            android:id="@+id/action_bar"
+            app:ab_titleBarLayout="@layout/action_bar_back_and_title"
+            tools:ignore="MissingConstraints"/>
 
+    <TextView
+            android:id="@+id/fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="你好"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:background="?colorBackground"/>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

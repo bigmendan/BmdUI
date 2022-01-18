@@ -30,7 +30,11 @@ import com.bmd.bmd_ui.view.statusbar.compat.StatusBarCompat
  *                      |--------TitleBar：位于StatusBar和BottomLine之间，可自定义布局
  *                      |--------BottomLine：分割线
  *               ----ForegroundLayer 前景层：可自定义布局
+ *
+ *               三层结构已经布好，可以继承 BmdActionBar 自定义ActionBar
+ *
  *@create:       2022-01-17 16:49
+ *
  */
 open class BmdActionBar @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
@@ -131,19 +135,25 @@ open class BmdActionBar @JvmOverloads constructor(
     protected fun initAttrs(attrs: AttributeSet?) {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.BmdActionBar)
         mImmersion = typedArray.getInt(R.styleable.BmdActionBar_ab_immersion, mImmersion)
+
         mBackgroundLayerLayoutRes =
             typedArray.getResourceId(R.styleable.BmdActionBar_ab_backgroundLayerLayout, mBackgroundLayerLayoutRes)
+
         mBackgroundLayerImageRes =
             typedArray.getResourceId(R.styleable.BmdActionBar_ab_backgroundLayerImageRes, mBackgroundLayerLayoutRes)
         mStatusBarVisible = typedArray.getInt(R.styleable.BmdActionBar_ab_statusBarVisible, mStatusBarVisible)
         mStatusBarMode = typedArray.getInt(R.styleable.BmdActionBar_ab_statusBarMode, mStatusBarMode)
+
         mStatusBarColor = typedArray.getColor(R.styleable.BmdActionBar_ab_statusBarColor, mStatusBarColor)
+
         mTitleBarHeight =
             typedArray.getDimension(R.styleable.BmdActionBar_ab_titleBarHeight, mTitleBarHeight.toFloat()).toInt()
         titleBarRes = typedArray.getResourceId(R.styleable.BmdActionBar_ab_titleBarLayout, titleBarRes)
+
         mBottomLineHeight =
             typedArray.getDimension(R.styleable.BmdActionBar_ab_bottomLineHeight, mBottomLineHeight.toFloat())
                 .toInt()
+
         mBottomLineColor = typedArray.getColor(R.styleable.BmdActionBar_ab_bottomLineColor, mBottomLineColor)
         mBottomLineResId = typedArray.getResourceId(R.styleable.BmdActionBar_ab_bottomLineResId, mBottomLineResId)
         mBottomLineOutside = typedArray.getBoolean(R.styleable.BmdActionBar_ab_bottomLineOutside, mBottomLineOutside)
@@ -171,7 +181,7 @@ open class BmdActionBar @JvmOverloads constructor(
         }
 
         // 2 初始ActionBarLayer
-        actionBar = inflate(context, R.layout.bmdaction_action_bar, null) as LinearLayout
+        actionBar = inflate(context, R.layout.bmd_action_bar, null) as LinearLayout
         addViewInLayout(actionBar, childCount, makeLayerLayoutParamsWrap(), true)
 
         // 2.1 初始StatusBar
@@ -209,7 +219,7 @@ open class BmdActionBar @JvmOverloads constructor(
         performClickToFinish()
     }
 
-    protected fun inflateTitleBar(): View? {
+     open fun inflateTitleBar(): View? {
         return if (titleBarRes > 0) {
             LayoutInflater.from(context).inflate(titleBarRes, titleBar, false)
         } else null
