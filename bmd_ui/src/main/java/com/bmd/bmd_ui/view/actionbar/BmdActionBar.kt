@@ -269,7 +269,7 @@ open class BmdActionBar @JvmOverloads constructor(
     val statusBar: StatusBarView?
         get() = mStatusBar
 
-    fun setTitleBarChild(titleBarChild: View?) {
+    private fun setTitleBarChild(titleBarChild: View?) {
         titleBar!!.removeAllViewsInLayout()
         if (titleBarChild != null) {
             var titleBarChildParams = titleBarChild.layoutParams

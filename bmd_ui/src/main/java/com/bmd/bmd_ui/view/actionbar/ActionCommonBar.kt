@@ -43,7 +43,7 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
         }
 
 
-        return null
+        return mTitleBarBinding!!.root
     }
 
 
