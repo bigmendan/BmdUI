@@ -12,7 +12,7 @@ import com.bmd.bmd_ui.databinding.BmdActionBarCommonBinding
  *@description:  通用ActionBar 标题栏
  *@create:       2022-01-18 17:33
  */
-class ActionBarCommon(context: Context, attrs: AttributeSet? = null) : BmdActionBar(context, attrs) {
+class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdActionBar(context, attrs) {
 
     // titleBar布局
     private var mTitleBarBinding: BmdActionBarCommonBinding? = null
