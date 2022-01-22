@@ -21,7 +21,7 @@ class ActionBarCommon(context: Context, attrs: AttributeSet? = null) : BmdAction
     init {
         val ta = context.obtainStyledAttributes(attrs, R.styleable.ActionBarCommon)
 
-
+        // 测试 dev
 
 
         ta.recycle()

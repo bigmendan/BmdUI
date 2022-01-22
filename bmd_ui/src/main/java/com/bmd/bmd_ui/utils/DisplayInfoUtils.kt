@@ -5,10 +5,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Point
 import android.util.DisplayMetrics
-import com.bmd.bmd_ui.utils.DisplayInfoUtils
-import com.bmd.bmd_ui.base.GlobalApp
 import android.view.WindowManager
-import android.view.Display
 import java.lang.Exception
 
 /**
