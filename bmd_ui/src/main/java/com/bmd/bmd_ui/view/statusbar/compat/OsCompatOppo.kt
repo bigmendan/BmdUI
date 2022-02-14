@@ -5,11 +5,11 @@ import android.os.Build
 import android.view.Window
 import androidx.annotation.NonNull
 import androidx.fragment.app.Fragment
-import com.bmd.bmd_ui.utils.DarkModeUtils
+import com.bmd.bmd_ui.view.statusbar.utils.DarkModeUtils
 
 /**
  *@author:       Bigmendan
- *@description:
+ *@description:  Oppo设备状态栏处理
  *@create:       2022-01-17 17:31
  */
 class OsCompatOppo : OsCompat {

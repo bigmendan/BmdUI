@@ -3,16 +3,16 @@
 
     <!--  MultiStateView  -->
     <declare-styleable name="MultiStateView">
-        <attr format="reference" name="msv_loadingView"/>
-        <attr format="reference" name="msv_emptyView"/>
-        <attr format="reference" name="msv_errorView"/>
-        <attr format="enum" name="msv_viewState">
+        <attr name="msv_loadingView" format="reference"/>
+        <attr name="msv_emptyView" format="reference"/>
+        <attr name="msv_errorView" format="reference"/>
+        <attr name="msv_viewState" format="enum">
             <enum name="content" value="0"/>
             <enum name="error" value="1"/>
             <enum name="empty" value="2"/>
             <enum name="loading" value="3"/>
         </attr>
-        <attr format="boolean" name="msv_animateViewChanges"/>
+        <attr name="msv_animateViewChanges" format="boolean"/>
     </declare-styleable>
 
 
@@ -93,6 +93,7 @@
         <attr name="abc_rightTextPaddingRight" format="reference|dimension"/>
         <attr name="abc_rightTextPaddingTop" format="reference|dimension"/>
         <attr name="abc_rightTextPaddingBottom" format="reference|dimension"/>
-
     </declare-styleable>
+
+
 </resources>

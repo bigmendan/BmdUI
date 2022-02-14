@@ -1,4 +1,4 @@
-package com.bmd.bmd_ui.utils
+package com.bmd.bmd_ui.view.statusbar.utils
 
 import android.os.Build
 import android.view.View

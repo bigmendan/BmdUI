@@ -14,15 +14,14 @@ import androidx.annotation.LayoutRes
 import androidx.annotation.Nullable
 import com.bmd.bmd_ui.R
 
-/**
- * View that contains 4 different states: Content, Error, Empty, and Loading.<br></br>
- * Each state has their own separate layout which can be shown/hidden by setting
- * the [MultiStateView.ViewState] accordingly
- * Every MultiStateView ***MUST*** contain a content view. The content view
- * is obtained from whatever is inside of the tags of the view via its XML declaration
- */
-class MultiStateView : FrameLayout {
 
+/**
+ *@Description:  4种状态： Content  Error  Empty  Loading
+ *@date:         2022/1/19
+ */
+class MultiStateView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null
+) : FrameLayout(context, attrs) {
 
     @IntDef(
         ViewState.VIEW_STATE_UNKNOWN,
@@ -43,11 +42,13 @@ class MultiStateView : FrameLayout {
     }
 
 
-    private lateinit var mInflater: LayoutInflater
+    private var mInflater: LayoutInflater
     private var mContentView: View? = null
+
     private lateinit var mLoadingView: View
     private lateinit var mErrorView: View
     private lateinit var mEmptyView: View
+
     private var mAnimateViewChanges = false
 
     @Nullable
@@ -56,16 +57,8 @@ class MultiStateView : FrameLayout {
     @ViewState
     private var mViewState = ViewState.VIEW_STATE_UNKNOWN
 
-    @JvmOverloads
-    constructor(context: Context?, attrs: AttributeSet? = null) : super(context!!, attrs) {
-        init(attrs)
-    }
 
-    constructor(context: Context?, attrs: AttributeSet?, defStyle: Int) : super(context!!, attrs, defStyle) {
-        init(attrs)
-    }
-
-    private fun init(attrs: AttributeSet?) {
+    init {
         mInflater = LayoutInflater.from(context)
         val a = context.obtainStyledAttributes(attrs, R.styleable.MultiStateView)
 
@@ -107,7 +100,8 @@ class MultiStateView : FrameLayout {
         setView(ViewState.VIEW_STATE_UNKNOWN)
     }
 
-    /* All of the addView methods have been overridden so that it can obtain the content view via XML
+    /* All of the addView methods have been overridden
+    so that it can obtain the content view via XML
      It is NOT recommended to add views into MultiStateView via the addView methods, but rather use
      any of the setViewForState methods to set views for their given ViewState accordingly */
     override fun addView(child: View) {
@@ -196,9 +190,6 @@ class MultiStateView : FrameLayout {
     private fun setView(@ViewState previousState: Int) {
         when (mViewState) {
             ViewState.VIEW_STATE_LOADING -> {
-                if (mLoadingView == null) {
-                    throw NullPointerException("Loading View")
-                }
                 if (mContentView != null) mContentView!!.visibility = GONE
                 if (mErrorView != null) mErrorView!!.visibility = GONE
                 if (mEmptyView != null) mEmptyView!!.visibility = GONE
@@ -371,6 +362,7 @@ class MultiStateView : FrameLayout {
             return
         }
         previousView.visibility = VISIBLE
+
         val anim = ObjectAnimator.ofFloat(previousView, "alpha", 1.0f, 0.0f).setDuration(250L)
         anim.addListener(object : AnimatorListenerAdapter() {
             override fun onAnimationEnd(animation: Animator) {
@@ -392,11 +384,4 @@ class MultiStateView : FrameLayout {
     }
 
 
-//    companion object {
-//        const val VIEW_STATE_UNKNOWN = -1
-//        const val VIEW_STATE_CONTENT = 0
-//        const val VIEW_STATE_ERROR = 1
-//        const val VIEW_STATE_EMPTY = 2
-//        const val VIEW_STATE_LOADING = 3
-//    }
 }

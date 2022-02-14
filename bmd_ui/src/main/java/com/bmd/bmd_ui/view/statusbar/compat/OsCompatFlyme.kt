@@ -6,13 +6,13 @@ import android.view.Window
 import android.view.WindowManager
 import androidx.annotation.NonNull
 import androidx.fragment.app.Fragment
-import com.bmd.bmd_ui.utils.DarkModeUtils
+import com.bmd.bmd_ui.view.statusbar.utils.DarkModeUtils
 import java.lang.reflect.Method
 
 
 /**
  *@author:       Bigmendan
- *@description:
+ *@description:  魅族手机状态栏适配
  *@create:       2022-01-17 17:26
  */
 

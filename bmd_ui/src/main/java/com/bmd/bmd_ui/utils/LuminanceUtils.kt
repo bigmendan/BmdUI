@@ -54,7 +54,9 @@ object LuminanceUtils {
             if (isLight(bitmap.getPixel(x, y_t2b))) ++light else ++dark
             if (isLight(bitmap.getPixel(x, y_b2t))) ++light else ++dark
             if (isLight(bitmap.getPixel(x, y_m))) ++light else ++dark
-            if (x == x_m) for (y in 0 until h) if (isLight(bitmap.getPixel(x, y))) ++light else ++dark
+            if (x == x_m) {
+                for (y in 0 until h) if (isLight(bitmap.getPixel(x, y))) ++light else ++dark
+            }
         }
         return if (dark > light) 0.0 else 1.0
     }

@@ -7,7 +7,7 @@ import androidx.annotation.Nullable
 
 /**
  *@author:       Bigmendan
- *@description:  ..
+ *@description:  通过Context获取到当前Context的Activity?
  *@create:       2022-01-17 17:05
  */
 object ContextUtils {
