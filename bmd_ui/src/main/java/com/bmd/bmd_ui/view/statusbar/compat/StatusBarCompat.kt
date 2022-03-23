@@ -23,7 +23,11 @@ import com.bmd.bmd_ui.utils.TransparentUtils
 
 object StatusBarCompat {
     fun getHeight(@NonNull context: Context): Int {
-        val resourceId = context.resources.getIdentifier("status_bar_height", "dimen", "android")
+        val resourceId = context.resources.getIdentifier(
+            "status_bar_height",
+            "dimen", "android"
+        )
+
         return try {
             context.resources.getDimensionPixelSize(resourceId)
         } catch (e: Exception) {
@@ -263,12 +267,12 @@ object StatusBarCompat {
     }
 
     fun transparent(@NonNull fragment: Fragment) {
-        val activity: Activity = fragment.getActivity() ?: return
+        val activity: Activity = fragment.activity ?: return
         transparent(activity)
     }
 
     fun transparent(@NonNull context: Context?) {
-        val activity: Activity = com.bmd.bmd_ui.utils.ContextUtils.getActivity(context) ?: return
+        val activity: Activity = ContextUtils.getActivity(context) ?: return
         transparent(activity)
     }
 

@@ -49,6 +49,7 @@ open class BmdActionBar @JvmOverloads constructor(
         StatusBarMode.AUTO,
         StatusBarMode.REAL_TIME
     )
+
     @Retention(AnnotationRetention.SOURCE)
     annotation class StatusBarMode {
         companion object {
@@ -108,6 +109,7 @@ open class BmdActionBar @JvmOverloads constructor(
 
     var actionBar: LinearLayout? = null
         private set
+
     private var mStatusBar: StatusBarView? = null
 
     var titleBar: FrameLayout? = null
@@ -132,7 +134,7 @@ open class BmdActionBar @JvmOverloads constructor(
     }
 
     @CallSuper
-    protected fun initAttrs(attrs: AttributeSet?) {
+    protected open fun initAttrs(attrs: AttributeSet?) {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.BmdActionBar)
         mImmersion = typedArray.getInt(R.styleable.BmdActionBar_ab_immersion, mImmersion)
 
@@ -144,7 +146,7 @@ open class BmdActionBar @JvmOverloads constructor(
         mStatusBarVisible = typedArray.getInt(R.styleable.BmdActionBar_ab_statusBarVisible, mStatusBarVisible)
         mStatusBarMode = typedArray.getInt(R.styleable.BmdActionBar_ab_statusBarMode, mStatusBarMode)
 
-        mStatusBarColor = typedArray.getColor(R.styleable.BmdActionBar_ab_statusBarColor, mStatusBarColor)
+//        mStatusBarColor = typedArray.getColor(R.styleable.BmdActionBar_ab_statusBarColor, Color.TRANSPARENT)
 
         mTitleBarHeight =
             typedArray.getDimension(R.styleable.BmdActionBar_ab_titleBarHeight, mTitleBarHeight.toFloat()).toInt()
@@ -196,6 +198,7 @@ open class BmdActionBar @JvmOverloads constructor(
         if (mTitleBarHeight >= 0) {
             titleBar!!.layoutParams.height = mTitleBarHeight
         }
+
         setTitleBarChild(inflateTitleBar())
 
         // 2.3 初始BottomLine
@@ -219,7 +222,7 @@ open class BmdActionBar @JvmOverloads constructor(
         performClickToFinish()
     }
 
-     open fun inflateTitleBar(): View? {
+    open fun inflateTitleBar(): View? {
         return if (titleBarRes > 0) {
             LayoutInflater.from(context).inflate(titleBarRes, titleBar, false)
         } else null

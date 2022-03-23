@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="action_bar_title_color">#000000</color>
+    <color name="action_bar_center_text_color_def">#000000</color>
+    <color name="action_bar_left_text_color_def">#000000</color>
+    <color name="action_bar_left_icon_color_def">#000000</color>
+    <color name="action_bar_right_text_color_def">#000000</color>
+    <color name="action_bar_right_icon_color_def">#000000</color>
 
 </resources>

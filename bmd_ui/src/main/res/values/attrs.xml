@@ -24,11 +24,6 @@
             <enum name="immersed" value="2"/>
         </attr>
 
-        <!--    actionBar    -->
-        <attr name="ab_backgroundLayerLayout" format="reference"/>
-        <attr name="ab_backgroundLayerImageRes" format="reference"/>
-
-
         <!--   StatusBar 显示状态   -->
         <attr name="ab_statusBarVisible" format="enum">
             <enum name="auto" value="0"/>
@@ -47,7 +42,10 @@
             <enum name="realTime" value="4"/>
         </attr>
 
-        <attr name="ab_clickToFinish" format="reference"/>
+        <!--    actionBar    -->
+        <attr name="ab_backgroundLayerLayout" format="reference"/>
+        <attr name="ab_backgroundLayerImageRes" format="reference"/>
+        <attr name="ab_clickToFinish" format="boolean"/>
         <attr name="ab_titleBarLayout" format="reference"/>
         <attr name="ab_titleBarHeight" format="dimension|reference"/>
         <attr name="ab_bottomLineHeight" format="dimension|reference"/>
@@ -56,20 +54,22 @@
         <attr name="ab_bottomLineOutside" format="boolean|reference"/>
         <attr name="ab_foregroundLayerLayout" format="reference"/>
 
-
     </declare-styleable>
 
 
     <!--    ActionBarCommon的自定义属性 -->
     <declare-styleable name="ActionBarCommon">
-        <attr name="abc_leftIconClickToFinish" format="boolean|reference"/>
-        <attr name="abc_leftTextClickToFinish" format="boolean|reference"/>
+        <attr name="abc_leftIconClickToFinish" format="boolean"/>
         <attr name="abc_leftIconRes" format="reference"/>
         <attr name="abc_leftIconColor" format="reference|color"/>
         <attr name="abc_leftIconPaddingLeft" format="reference|dimension"/>
         <attr name="abc_leftIconPaddingRight" format="reference|dimension"/>
         <attr name="abc_leftIconPaddingTop" format="reference|dimension"/>
         <attr name="abc_leftIconPaddingBottom" format="reference|dimension"/>
+        <attr name="abc_leftIconMarginLeft" format="reference|dimension"/>
+        <attr name="abc_leftIconMarginRight" format="reference|dimension"/>
+        <attr name="abc_leftIconMarginTop" format="reference|dimension"/>
+        <attr name="abc_leftIconMarginBottom" format="reference|dimension"/>
         <attr name="abc_leftText" format="string|reference"/>
         <attr name="abc_leftTextColor" format="string|reference"/>
         <attr name="abc_leftTextSize" format="reference|dimension"/>
@@ -77,15 +77,20 @@
         <attr name="abc_leftTextPaddingRight" format="reference|dimension"/>
         <attr name="abc_leftTextPaddingTop" format="reference|dimension"/>
         <attr name="abc_leftTextPaddingBottom" format="reference|dimension"/>
-        <attr name="abc_TitleSize" format="reference|dimension"/>
-        <attr name="abc_TitleColor" format="reference|color"/>
-        <attr name="abc_Title" format="string|reference"/>
+        <attr name="abc_leftTextClickToDo" format="boolean|reference"/>
+        <attr name="abc_CenterTextSize" format="reference|dimension"/>
+        <attr name="abc_CenterTextColor" format="reference|color"/>
+        <attr name="abc_CenterText" format="string|reference"/>
         <attr name="abc_rightIconRes" format="reference"/>
         <attr name="abc_rightIconColor" format="reference|color"/>
         <attr name="abc_rightIconPaddingLeft" format="reference|dimension"/>
         <attr name="abc_rightIconPaddingRight" format="reference|dimension"/>
         <attr name="abc_rightIconPaddingTop" format="reference|dimension"/>
         <attr name="abc_rightIconPaddingBottom" format="reference|dimension"/>
+        <attr name="abc_rightIconMarginLeft" format="reference|dimension"/>
+        <attr name="abc_rightIconMarginRight" format="reference|dimension"/>
+        <attr name="abc_rightIconMarginTop" format="reference|dimension"/>
+        <attr name="abc_rightIconMarginBottom" format="reference|dimension"/>
         <attr name="abc_rightText" format="string|reference"/>
         <attr name="abc_rightTextColor" format="string|reference"/>
         <attr name="abc_rightTextSize" format="reference|dimension"/>
@@ -95,5 +100,23 @@
         <attr name="abc_rightTextPaddingBottom" format="reference|dimension"/>
     </declare-styleable>
 
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="drawable_height" format="reference|dimension"/>
+        <attr name="drawable_width" format="reference|dimension"/>
+        <attr name="drawable_marginLeft" format="reference|dimension"/>
+        <attr name="drawable_marginRight" format="reference|dimension"/>
+        <attr name="drawable_marginTop" format="reference|dimension"/>
+        <attr name="drawable_marginBottom" format="reference|dimension"/>
+        <attr name="drawable_res" format="reference"/>
+
+        <attr name="drawableLocation" format="enum">
+            <enum name="top" value="0"/>
+            <enum name="left" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="bottom" value="3"/>
+        </attr>
+
+    </declare-styleable>
 
 </resources>

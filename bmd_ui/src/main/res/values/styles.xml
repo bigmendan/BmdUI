@@ -12,7 +12,11 @@
     <style name="action_bar_common_left_icon">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:padding">@dimen/action_bar_padding_def</item>
+        <item name="android:paddingLeft">@dimen/action_bar_left_icon_padding_left_def</item>
+        <item name="android:paddingTop">@dimen/action_bar_left_icon_padding_top_def</item>
+        <item name="android:paddingRight">@dimen/action_bar_left_icon_padding_right_def</item>
+        <item name="android:paddingBottom">@dimen/action_bar_left_icon_padding_bottom_def</item>
+        <item name="android:tint">@color/action_bar_left_icon_color_def</item>
         <item name="android:scaleType">fitCenter</item>
     </style>
 
@@ -29,21 +33,21 @@
     <style name="action_bar_common_left_title">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textSize">@dimen/action_bar_title_text_size</item>
-        <item name="android:textColor">@color/action_bar_title_color</item>
-        <item name="android:paddingLeft">@dimen/action_bar_title_padding_left_def</item>
-        <item name="android:paddingRight">@dimen/action_bar_title_padding_right_def</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textSize">@dimen/action_bar_left_text_size_def</item>
+        <item name="android:textColor">@color/action_bar_left_text_color_def</item>
+        <item name="android:paddingLeft">@dimen/action_bar_left_text_padding_left_def</item>
+        <item name="android:paddingRight">@dimen/action_bar_left_text_padding_right_def</item>
 
     </style>
 
     <!--   ActionBarCenterTitle -->
-    <style name="action_bar_common_center_title">
+    <style name="action_bar_common_center_text">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textSize">@dimen/action_bar_title_center_text_size</item>
-        <item name="android:textColor">@color/action_bar_title_color</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">@dimen/action_bar_title_center_text_size_def</item>
+        <item name="android:textColor">@color/action_bar_center_text_color_def</item>
         <item name="android:singleLine">true</item>
     </style>
 
@@ -52,16 +56,12 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">@dimen/action_bar_title_text_size</item>
-        <item name="android:textColor">@color/action_bar_title_color</item>
-        <item name="android:paddingLeft">@dimen/action_bar_title_padding_left_def</item>
-        <item name="android:paddingRight">@dimen/action_bar_title_padding_right_def</item>
+        <item name="android:textSize">@dimen/action_bar_right_text_size_def</item>
+        <item name="android:textColor">@color/action_bar_right_text_color_def</item>
+        <item name="android:paddingLeft">@dimen/action_bar_right_text_padding_left_def</item>
+        <item name="android:paddingRight">@dimen/action_bar_right_text_padding_right_def</item>
 
     </style>
-
-
-
-
 
 
 </resources>

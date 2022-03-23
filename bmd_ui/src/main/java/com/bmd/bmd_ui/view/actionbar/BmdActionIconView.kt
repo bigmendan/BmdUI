@@ -16,7 +16,9 @@ class BmdActionIconView @JvmOverloads constructor(
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         val heightSize = MeasureSpec.getSize(heightMeasureSpec)
+
         setMeasuredDimension(heightSize, heightSize)
     }
+
 
 }

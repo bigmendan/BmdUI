@@ -6,11 +6,31 @@
     <dimen name="action_bar_title_height_def">48dp</dimen>
 
     <!--  ActionBar默认间距  -->
-    <dimen name="action_bar_padding_def">13dp</dimen>
+    <dimen name="action_bar_padding_def">16dp</dimen>
     <dimen name="action_bar_padding_top_def">13dp</dimen>
     <dimen name="action_bar_padding_left_def">13dp</dimen>
     <dimen name="action_bar_padding_right_def">13dp</dimen>
     <dimen name="action_bar_padding_bottom_def">13dp</dimen>
+
+    <dimen name="action_bar_left_icon_padding_def">16dp</dimen>
+    <dimen name="action_bar_left_icon_padding_left_def">16dp</dimen>
+    <dimen name="action_bar_left_icon_padding_right_def">16dp</dimen>
+    <dimen name="action_bar_left_icon_padding_top_def">16dp</dimen>
+    <dimen name="action_bar_left_icon_padding_bottom_def">16dp</dimen>
+    <dimen name="action_bar_left_text_padding_def">16dp</dimen>
+    <dimen name="action_bar_left_text_padding_left_def">16dp</dimen>
+    <dimen name="action_bar_left_text_padding_right_def">16dp</dimen>
+    <dimen name="action_bar_left_text_padding_top_def">16dp</dimen>
+    <dimen name="action_bar_left_text_padding_bottom_def">16dp</dimen>
+    <dimen name="action_bar_left_text_size_def">16sp</dimen>
+
+    <dimen name="action_bar_right_icon_padding_def">16dp</dimen>
+    <dimen name="action_bar_right_text_padding_def">16dp</dimen>
+    <dimen name="action_bar_right_text_padding_left_def">16dp</dimen>
+    <dimen name="action_bar_right_text_padding_right_def">16dp</dimen>
+    <dimen name="action_bar_right_text_padding_top_def">16dp</dimen>
+    <dimen name="action_bar_right_text_padding_bottom_def">16dp</dimen>
+    <dimen name="action_bar_right_text_size_def">16dp</dimen>
 
 
     <!--  ActionBarTitle的默认属性  -->
@@ -21,9 +41,8 @@
     <dimen name="action_bar_title_padding_right_def">15dp</dimen>
     <dimen name="action_bar_title_padding_bottom_def">15dp</dimen>
 
-
     <!-- ActionBar居中标题的size   -->
-    <dimen name="action_bar_title_center_text_size">20sp</dimen>
+    <dimen name="action_bar_title_center_text_size_def">17sp</dimen>
 
 
 </resources>

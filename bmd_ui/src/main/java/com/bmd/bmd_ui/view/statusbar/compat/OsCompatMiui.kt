@@ -30,7 +30,7 @@ class OsCompatMiui : OsCompat {
 
 
     override fun setDarkIconMode(@NonNull fragment: Fragment, darkIconMode: Boolean) {
-        val activity: Activity = fragment.getActivity() ?: return
+        val activity: Activity = fragment.activity ?: return
         setDarkIconMode(activity, darkIconMode)
     }
 
@@ -41,7 +41,8 @@ class OsCompatMiui : OsCompat {
 
 
     override fun setDarkIconMode(@NonNull window: Window, darkIconMode: Boolean) {
-        setDarkIconMode(window, darkIconMode)
+//        setDarkIconMode(window, darkIconMode)
+        MiuiStatusBarUtils.setDarkIconMode(window,darkIconMode)
     }
 
     private object MiuiStatusBarUtils {
@@ -68,7 +69,7 @@ class OsCompatMiui : OsCompat {
             return false
         }
 
-        private fun setDarkIconMode(window: Window, darkIconMode: Boolean) {
+        fun setDarkIconMode(window: Window, darkIconMode: Boolean) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 DarkModeUtils.setDarkIconMode(window, darkIconMode)
             } else {
