@@ -44,6 +44,8 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
     private var leftTextSize = 0F
     private var leftTextPaddingLeft = 0
     private var leftTextPaddingRight = 0
+    private var leftTextPaddingTop = 0
+    private var leftTextPaddingBottom = 0
     private var leftTextClickToDo = false
 
 
@@ -90,6 +92,10 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
         val leftTextColorDef = ContextCompat.getColor(context, R.color.action_bar_left_text_color_def)
         val leftTextSizeDef = res.getDimension(R.dimen.action_bar_left_text_size_def)
         val leftTextPaddingDef = res.getDimension(R.dimen.action_bar_left_text_padding_def)
+        val leftTextPaddingStartDef = res.getDimension(R.dimen.action_bar_left_text_padding_left_def)
+        val leftTextPaddingEndDef = res.getDimension(R.dimen.action_bar_left_text_padding_right_def)
+        val leftTextPaddingTopDef = res.getDimension(R.dimen.action_bar_left_text_padding_top_def)
+        val leftTextPaddingBottomDef = res.getDimension(R.dimen.action_bar_left_text_padding_bottom_def)
 
         val centerTextSizeDef = res.getDimension(R.dimen.action_bar_title_center_text_size_def)
         val centerTextColorDef = ContextCompat.getColor(context, R.color.action_bar_center_text_color_def)
@@ -127,9 +133,14 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
         leftTextColor = ta.getColor(R.styleable.ActionBarCommon_abc_leftTextColor, leftTextColorDef)
         leftTextSize = ta.getDimension(R.styleable.ActionBarCommon_abc_leftTextSize, leftTextSizeDef)
         leftTextPaddingLeft =
-            ta.getDimension(R.styleable.ActionBarCommon_abc_leftTextPaddingLeft, leftTextPaddingDef).toInt()
+            ta.getDimension(R.styleable.ActionBarCommon_abc_leftTextPaddingLeft, leftTextPaddingStartDef).toInt()
         leftTextPaddingRight =
-            ta.getDimension(R.styleable.ActionBarCommon_abc_leftTextPaddingRight, leftTextPaddingDef).toInt()
+            ta.getDimension(R.styleable.ActionBarCommon_abc_leftTextPaddingRight, leftTextPaddingEndDef).toInt()
+        leftTextPaddingTop =
+            ta.getDimension(R.styleable.ActionBarCommon_abc_leftTextPaddingTop, leftTextPaddingTopDef).toInt()
+        leftTextPaddingBottom =
+            ta.getDimension(R.styleable.ActionBarCommon_abc_leftTextPaddingBottom, leftTextPaddingBottomDef).toInt()
+
         leftTextClickToDo = ta.getBoolean(R.styleable.ActionBarCommon_abc_leftTextClickToDo, false)
 
 
@@ -193,7 +204,7 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
 
                 if (leftIconRes > 0) {
                     visibility = View.VISIBLE
-                    setPadding(leftIconPaddingLeft, leftIconPaddingRight, leftIconPaddingTop, leftIconPaddingBottom)
+                    setPadding(leftIconPaddingLeft, leftIconPaddingTop, leftIconPaddingRight, leftIconPaddingBottom)
                     setImageResource(leftIconRes)
                     setColorFilter(leftIconColor)
 
@@ -214,9 +225,10 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
             it.actionBarCommonLeftText.let { t ->
                 if (leftText.isNotEmpty()) {
                     t.visibility = View.VISIBLE
-                    t.setPadding(leftTextPaddingLeft, leftTextPaddingRight, leftTextPaddingLeft, leftTextPaddingLeft)
+                    t.text = leftText
+                    t.setPadding(leftTextPaddingLeft, leftTextPaddingTop, leftTextPaddingRight, leftTextPaddingBottom)
                     t.setTextColor(leftTextColor)
-                    t.setTextSize(TypedValue.COMPLEX_UNIT_SP, leftTextSize)
+                    t.setTextSize(TypedValue.COMPLEX_UNIT_PX, leftTextSize)
 
                 } else {
                     t.visibility = View.GONE
