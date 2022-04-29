@@ -59,6 +59,8 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
     private var rightTextSize = 0F
     private var rightTextPaddingLeft = 0
     private var rightTextPaddingRight = 0
+    private var rightTextPaddingTop = 0
+    private var rightTextPaddingBottom = 0
     private var rightTextClickToDo = false
 
 
@@ -102,8 +104,10 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
 
 
         val rightTextSizeDef = res.getDimension(R.dimen.action_bar_right_text_size_def)
-        val rightTextPaddingLeftDef = res.getDimension(R.dimen.action_bar_right_text_padding_def)
-        val rightTextPaddingRightDef = res.getDimension(R.dimen.action_bar_right_text_padding_def)
+        val rightTextPaddingLeftDef = res.getDimension(R.dimen.action_bar_right_text_padding_left_def)
+        val rightTextPaddingRightDef = res.getDimension(R.dimen.action_bar_right_text_padding_right_def)
+        val rightTextPaddingTopDef = res.getDimension(R.dimen.action_bar_right_text_padding_top_def)
+        val rightTextPaddingBottomDef = res.getDimension(R.dimen.action_bar_right_text_padding_bottom_def)
         val rightTextColorDef = ContextCompat.getColor(context, R.color.action_bar_right_text_color_def)
 
         val rightIconPaddingDef = res.getDimension(R.dimen.action_bar_right_icon_padding_def)
@@ -157,7 +161,11 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
             ta.getDimension(R.styleable.ActionBarCommon_abc_rightTextPaddingLeft, rightTextPaddingLeftDef).toInt()
         rightTextPaddingRight =
             ta.getDimension(R.styleable.ActionBarCommon_abc_rightTextPaddingRight, rightTextPaddingRightDef).toInt()
-
+        rightTextPaddingTop =
+            ta.getDimension(R.styleable.ActionBarCommon_abc_rightTextPaddingTop, rightTextPaddingTopDef).toInt()
+        rightTextPaddingBottom =
+            ta.getDimension(R.styleable.ActionBarCommon_abc_rightTextPaddingBottom, rightTextPaddingBottomDef).toInt()
+        rightTextColor = ta.getColor(R.styleable.ActionBarCommon_abc_rightTextColor, rightTextColorDef)
 
         //rightIcon
         rightIconRes = ta.getResourceId(R.styleable.ActionBarCommon_abc_rightIconRes, 0)
@@ -251,6 +259,13 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
                     r.apply {
                         visibility = View.VISIBLE
                         text = rightText
+                        setPadding(
+                            rightTextPaddingLeft,
+                            rightTextPaddingRight,
+                            rightTextPaddingTop,
+                            rightTextPaddingBottom
+                        )
+                        setTextColor(rightTextColor)
                         setTextSize(TypedValue.COMPLEX_UNIT_PX, rightTextSize)
                     }
 
@@ -276,8 +291,7 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
                     visibility = View.VISIBLE
                     setPadding(rightIconPaddingLeft, rightIconPaddingRight, rightIconPaddingTop, rightIconPaddingBottom)
                     setImageResource(rightIconRes)
-                    setColorFilter(rightIconColor)
-
+//                    setColorFilter(rightIconColor)
 
                 } else {
                     visibility = View.GONE
@@ -310,6 +324,9 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
 
                 visibility = View.VISIBLE
                 text = leftStr
+                //颜色
+                setTextColor(leftTextColor)
+
 
                 if (targetStyle > 0) {
                     setTextAppearance(targetStyle)
@@ -344,6 +361,23 @@ class ActionCommonBar(context: Context, attrs: AttributeSet? = null) : BmdAction
         }
     }
 
+    fun setRightIconRes(res: Int) {
+        mTitleBarBinding?.let {
+            it.actionBarCommonRightIcon.apply {
+                if (res > 0) {
+
+                    visibility = View.VISIBLE
+                    setPadding(rightIconPaddingLeft, rightIconPaddingTop, rightIconPaddingRight, rightIconPaddingBottom)
+                    setImageResource(res)
+
+
+                } else {
+                    visibility = View.GONE
+                }
+            }
+        }
+
+    }
 
     fun setRightTextClickToDo(listener: BmdActionClickListener) {
         mTitleBarBinding?.let {

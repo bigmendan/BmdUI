@@ -24,12 +24,12 @@
     <dimen name="action_bar_left_text_padding_bottom_def">0dp</dimen>
     <dimen name="action_bar_left_text_size_def">16sp</dimen>
 
-    <dimen name="action_bar_right_icon_padding_def">16dp</dimen>
+    <dimen name="action_bar_right_icon_padding_def">13dp</dimen>
     <dimen name="action_bar_right_text_padding_def">16dp</dimen>
     <dimen name="action_bar_right_text_padding_left_def">16dp</dimen>
     <dimen name="action_bar_right_text_padding_right_def">16dp</dimen>
-    <dimen name="action_bar_right_text_padding_top_def">16dp</dimen>
-    <dimen name="action_bar_right_text_padding_bottom_def">16dp</dimen>
+    <dimen name="action_bar_right_text_padding_top_def">0dp</dimen>
+    <dimen name="action_bar_right_text_padding_bottom_def">0dp</dimen>
     <dimen name="action_bar_right_text_size_def">16dp</dimen>
 
 

@@ -24,6 +24,10 @@
     <style name="action_bar_common_right_icon">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/action_bar_left_icon_padding_left_def</item>
+        <item name="android:paddingTop">@dimen/action_bar_left_icon_padding_top_def</item>
+        <item name="android:paddingRight">@dimen/action_bar_left_icon_padding_right_def</item>
+        <item name="android:paddingBottom">@dimen/action_bar_left_icon_padding_bottom_def</item>
         <item name="android:padding">@dimen/action_bar_padding_def</item>
         <item name="android:scaleType">fitCenter</item>
     </style>

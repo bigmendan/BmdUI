@@ -8,7 +8,8 @@ import android.graphics.Rect
 import android.view.inputmethod.InputMethodManager
 
 /**
- *  监听键盘变化;
+ *@Description:  监听键盘变化;
+ *@date:         2022/4/8
  */
 class SoftKeyBoardListener(activity: Activity) {
     // activity的根视图

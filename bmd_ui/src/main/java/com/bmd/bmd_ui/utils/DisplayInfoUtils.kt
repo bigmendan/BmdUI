@@ -7,6 +7,8 @@ import android.graphics.Point
 import android.util.DisplayMetrics
 import android.view.WindowManager
 import java.lang.Exception
+import kotlin.math.pow
+import kotlin.math.sqrt
 
 /**
  * 显示相关帮助类
@@ -15,11 +17,14 @@ import java.lang.Exception
  * 3.获取屏幕密度相关
  * 4.获取状态栏高度
  * 5.dp/px/sp相互转换
+ *
  */
 @SuppressLint("StaticFieldLeak")
 class DisplayInfoUtils private constructor() {
     private val mContext: Context?
     private val mDisplayMetrics: DisplayMetrics
+    private val wm: WindowManager
+
 
     companion object {
         val instance = DisplayInfoUtils()
@@ -28,6 +33,7 @@ class DisplayInfoUtils private constructor() {
     init {
         mContext = application
         mDisplayMetrics = mContext!!.resources.displayMetrics
+        wm = mContext.getSystemService(Context.WINDOW_SERVICE) as WindowManager
     }
 
     /**
@@ -217,6 +223,9 @@ class DisplayInfoUtils private constructor() {
     fun sp2dp(sp: Float): Float {
         return sp * scaledDensity / density
     }
+
+
+
 
 
 }

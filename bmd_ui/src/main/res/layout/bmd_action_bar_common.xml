@@ -45,7 +45,7 @@
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" app:layout_constraintVertical_bias="0.0">
 
         <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/action_bar_common_right_text"
@@ -55,7 +55,7 @@
 
 
         <com.bmd.bmd_ui.view.actionbar.BmdActionIconView
-                style="@style/action_bar_common_left_icon"
+                style="@style/action_bar_common_right_icon"
                 android:id="@+id/action_bar_common_right_icon"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>

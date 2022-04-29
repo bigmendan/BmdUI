@@ -11,9 +11,9 @@ import androidx.annotation.ColorInt
 import androidx.annotation.NonNull
 import androidx.fragment.app.Fragment
 import com.bmd.bmd_ui.utils.ContextUtils
-import com.bmd.bmd_ui.utils.LuminanceUtils
-import com.bmd.bmd_ui.utils.OsCompatHolder
-import com.bmd.bmd_ui.utils.TransparentUtils
+import com.bmd.bmd_ui.utils.statusbar.LuminanceUtils
+import com.bmd.bmd_ui.utils.statusbar.OsCompatHolder
+import com.bmd.bmd_ui.utils.statusbar.TransparentUtils
 
 /**
  *@author:       Bigmendan
